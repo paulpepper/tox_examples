@@ -1,7 +1,8 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# This workflow will install dependencies and run tests using Python tox.
+# The version matrix of Python and various libraries tested (Python vs Django, for instance)
+# is entirely managed by tox and so no strategy section is required by within test jobs.
 
-name: Python application
+name: Version matrix of Python-Django tests using tox.
 
 on:
   push:
@@ -16,8 +17,12 @@ jobs:
         working-directory: multipython
       
     runs-on: ubuntu-latest
+
     env:
+      # Choose a version of Python in which to set up the tox test environment.
       python-version: 3.9
+
+    # No strategy is required to manage our version matrix of tests - tox manages this.
     #strategy:
     #  matrix:
     #    python-version: [3.9]
