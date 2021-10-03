@@ -1,6 +1,6 @@
 # This workflow will install dependencies and run tests using Python tox.
 # The version matrix of Python and various libraries tested (Python vs Django, for instance)
-# is entirely managed by tox and so no strategy section is required by within test jobs.
+# is entirely managed by tox and so no strategy section is required within any test jobs.
 
 name: Version matrix of Python-Django tests using tox.
 
