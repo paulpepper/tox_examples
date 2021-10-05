@@ -1,13 +1,17 @@
-name: Python linting and formatting checks
+name: Python linting and formatting checks.
 
 on:
+  workflow_dispatch:
+      purpose:
+        description: 'Purpose'
+        required: true
+        default: 'Manual run'
   push:
     branches: [ master ]    
   pull_request:
     branches: [ master ]
-  workflow_dispatch:
-
-jobs:  lint:
+  
+jobs: lint:
     # Lint
     runs-on: ubuntu-latest
 
