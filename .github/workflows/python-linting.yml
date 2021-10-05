@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       purpose:
-        description: 'Purpose'
+        description: 'Run reason'
         required: true
-        default: 'Manual run'
+        default: 'Manual check'
   push:
     branches: [ master ]    
   pull_request:
