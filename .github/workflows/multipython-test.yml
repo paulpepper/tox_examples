@@ -5,12 +5,10 @@
 name: Version matrix of Python-Django tests run via tox.
 
 on:
-  workflow_dispatch:
-    inputs:
-      purpose:
-        description: 'Run reason'
-        required: true
-        default: 'Manual check'
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   test:
