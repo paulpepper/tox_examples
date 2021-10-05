@@ -2,6 +2,7 @@ name: Python linting and formatting checks.
 
 on:
   workflow_dispatch:
+    inputs:
       purpose:
         description: 'Purpose'
         required: true
@@ -11,7 +12,8 @@ on:
   pull_request:
     branches: [ master ]
   
-jobs: lint:
+jobs:
+  lint:
     # Lint
     runs-on: ubuntu-latest
 
